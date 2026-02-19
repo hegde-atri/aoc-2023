@@ -3,4 +3,13 @@ name = "day1"
 version = "0.1.0"
 edition = "2024"
 
-[dependencies]
+[lib]
+name = "day1"
+path = "src/lib.rs"
+
+[dev-dependencies]
+criterion = "0.8.2"
+
+[[bench]]
+name = "day1"
+harness = false
