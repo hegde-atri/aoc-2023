@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-pub fn eleven_method(input: &str) -> u32 {
+pub fn part_one(input: &str) -> u32 {
     let mut sum = 0;
     for line in input.lines() {
         let mut tens = 0;
@@ -42,11 +42,10 @@ pub fn part_two(input: &str) -> u32 {
                     digits.push(c);
                 }
             }
-            for(word, digit) in &word_number_map {
+            for (word, digit) in &word_number_map {
                 if part.starts_with(word) {
                     let number: Vec<char> = digit.chars().collect();
                     digits.push(number[0]);
-
                 }
             }
         }
@@ -56,7 +55,5 @@ pub fn part_two(input: &str) -> u32 {
         }
     }
 
-
     return sum;
-
 }

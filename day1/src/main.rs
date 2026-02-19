@@ -1,11 +1,13 @@
 use std::fs;
 
-use day1::{eleven_method, part_two};
+use day1::{part_one, part_two};
 
 fn main() {
     let input = read_input();
-    let eleven_sum = part_two(&input);
-    println!("{eleven_sum}");
+    let part1 = part_one(&input);
+    let part2 = part_two(&input);
+    println!("Part 1: {part1}");
+    println!("Part 2: {part2}");
 }
 
 fn read_input() -> String {
